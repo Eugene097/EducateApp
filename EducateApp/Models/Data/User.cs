@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using EducateApp.Models.Data;
+using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EducateApp.Models
 {
@@ -28,5 +26,7 @@ namespace EducateApp.Models
         public string Patronymic { get; set; }
 
         //навигационные свойства
+        [Required]
+        public ICollection<FormOfStudy> FormsOfStudy { get; set; }
     }
 }
