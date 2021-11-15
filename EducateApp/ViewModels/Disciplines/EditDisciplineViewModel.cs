@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace EducateApp.Models.Data
+namespace EducateApp.ViewModels.Disciplines
 {
-    public class Disciplines
+    public class EditDisciplineViewModel
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Display(Name = "ИД")]
         public short Id { get; set; }
 
         [Required(ErrorMessage = "Введите индекс профиссионального модуля")]
@@ -33,8 +27,7 @@ namespace EducateApp.Models.Data
         [Display(Name = "Короткое название")]
         public string ShortName { get; set; }
 
-        [Required(ErrorMessage = "Введите идентификатор пользвоателя")]
-        [Display(Name = "Идентификатор пользвоателя")]
-        public User User { get; set; }
+        public string IdUser { get; set; }
+
     }
 }

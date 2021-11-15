@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EducateApp.Models.Data
 {
-    public class TypesOfTotals
+    public class TypeOfTotals
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "ИД")]
