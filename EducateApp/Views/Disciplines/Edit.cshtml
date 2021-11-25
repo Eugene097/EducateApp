@@ -4,22 +4,10 @@
     ViewData["Title"] = "Изменение - Дисциплины";
 }
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
-        <li class="breadcrumb-item"><a asp-controller="FormsOfStudy" asp-action="Index">Формы  обучения</a></li>
-        <li class="breadcrumb-item active">Создание</li>
-    </ol>
-</nav>
+<h1>Изменение</h1>
 
-<h3>
-    <a class="btn text-dark" asp-action="Index" title="Вернуться к списку">
-        <i class="fas fa-arrow-left"></i>
-    </a>
-    Изменение дисциплины
-</h3>
+<h4>Дисциплины</h4>
 <hr />
-
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -55,6 +43,10 @@
             </div>
         </form>
     </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {

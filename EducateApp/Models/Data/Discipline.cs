@@ -33,7 +33,6 @@ namespace EducateApp.Models.Data
         [Display(Name = "Короткое название")]
         public string ShortName { get; set; }
 
-        [Required]
         [Display(Name = "Идентификатор пользвоателя")]
         public string IdUser { get; set; }
 

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EducateApp.Models.Data
 {
-    public class TypeOfTotals
+    public class TypeOfTotal
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "ИД")]
@@ -17,8 +13,12 @@ namespace EducateApp.Models.Data
         [Display(Name = "Название аттестации")]
         public string CertificateName { get; set; }
 
-        [Required(ErrorMessage = "Введите идентификатор пользвоателя")]
-        [Display(Name = "Идентификатор пользвоателя")]
+        [Display(Name = "Преподаватель")]
+        [Required]
+        public string IdUser { get; set; }
+
+
+        [ForeignKey("IdUser")]
         public User User { get; set; }
     }
 }

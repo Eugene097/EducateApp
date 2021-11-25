@@ -4,20 +4,11 @@
     ViewData["Title"] = "Дисциплины";
 }
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Главная</a></li>
-        <li class="breadcrumb-item active">Дисциплины</li>
-    </ol>
-</nav>
-<h2>Дисциплины</h2>
+<h1>Дисциплины</h1>
 
-<h6>
-    <a class="btn text-dark" asp-action="Create">
-        <i class="far fa-plus-square"></i>  Добавить дисциплину
-    </a>
-</h6>
-
+<p>
+    <a asp-action="Create">Создать новую дисциплину</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -25,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.IndexProfModule)
             </th>
             <th>
-                Название модуля
+                @Html.DisplayNameFor(model => model.ProfModule)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Index)
