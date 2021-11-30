@@ -317,7 +317,7 @@ namespace EducateApp.Controllers
                 return NotFound();
             }
 
-            return View(group);
+            return PartialView(group);
         }
 
         public async Task<FileResult> DownloadPattern()
