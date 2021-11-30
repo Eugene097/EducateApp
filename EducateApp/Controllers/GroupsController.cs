@@ -400,7 +400,6 @@ namespace EducateApp.Controllers
             }
         }
 
-
         private bool GroupExists(short id)
         {
             return _context.Groups.Any(e => e.Id == id);
